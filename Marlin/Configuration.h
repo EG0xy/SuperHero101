@@ -403,18 +403,18 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
 
 // delta homing speeds must be the same on xyz
-#define HOMING_FEEDRATE {600, 600, 18, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {600, 600, 600, 0}  // set the homing speeds (mm/min)
 
 // default settings
 // delta speeds must be the same on xyz
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {652.124, 652.124, 652.124, 5930.783}  // default steps per unit for Kossel (GT2, 20 tooth)
 //calculation (32*63.68395*16)/50, (32*63.68395*16)/50, (32*63.68395*16)/50, (32*63.68395*16*36)/(9*7*3.1415926)
 
-#define DEFAULT_MAX_FEEDRATE          {30, 30, 30, 4.17}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {500, 500, 500, 150}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_FEEDRATE          {30, 30, 30, 5}    // (mm/sec)
+#define DEFAULT_MAX_ACCELERATION      {300, 300, 300, 17}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_ACCELERATION          250    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  150   // X, Y, Z and E max acceleration in mm/s^2 for retracts
+#define DEFAULT_ACCELERATION          150    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  17   // X, Y, Z and E max acceleration in mm/s^2 for retracts
 
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
