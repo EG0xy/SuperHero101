@@ -407,8 +407,9 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 // delta speeds must be the same on xyz
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {652.124, 652.124, 652.124, 5930.783}  // default steps per unit for Kossel (GT2, 20 tooth)
-//calculation (32*63.68395*16)/50, (32*63.68395*16)/50, (32*63.68395*16)/50, (32*63.68395*16*36)/(9*7*3.1415926)
+//The steppers have a 1:32 gearing, 101 Board has a 32 driver and a 15 tooth pulley.
+//Calculation: (32*32*16)/(2*15) = 564.1333 and if we have  1:64 (actually, 63.68395) it is (32*63.68395*16)/(2*15) = 1086.8727
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {564.1333, 564.1333, 564.1333, 5930.783}  // default steps per unit for Kossel (GT2, 20 tooth)
 
 #define DEFAULT_MAX_FEEDRATE          {30, 30, 30, 5}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {300, 300, 300, 17}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
